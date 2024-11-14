@@ -1,0 +1,24 @@
+* {
+    color: white;
+}
+
+.custom-block {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url('https://amorpelacomida.com.br/wp-content/uploads/2020/01/receita-de-broa-de-milho-sem-gluten-sem-leite.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.custom-form{
+    width: 50%;
+    padding: 3%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}

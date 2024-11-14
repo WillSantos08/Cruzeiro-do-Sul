@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Parcelas</h1>
+        <label>Valor da Compra:</label> <input id="valorCompra" value="">
+        <label>Número de Parcelas:</label>
+        <select id="numeroParcelas">
+            <option value="0"> A Vista</option>
+            <option value="1">2x s/Juros</option>
+            <option value="2">3x s/Juros</option>
+            <option value="3">4x s/Juros</option>
+            <option value="4">5x s/Juros</option>
+            <option value="5">6x s/Juros</option>
+            <option value="6">7x s/Juros</option>
+            <option value="7">8x s/Juros</option>
+            <option value="8">9x s/Juros</option>
+            <option value="9">10x s/Juros</option>
+            <option value="10">11x s/Juros</option>
+            <option value="11">12x s/Juros</option>
+        </select>
+        <p id="resultCalculo" style="color: black;"></p>
+        <button onclick="calcularParcelas();">Calcular Parcelas</button>
+    <script src="./index.js"></script>
+</body>
+</html>

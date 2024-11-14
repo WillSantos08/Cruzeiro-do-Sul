@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="textbox" type="text">
+    <input type="button" value="Confirmar" onclick="confirmar()">
+    <script>
+        function confirmar() {
+        texto = document.getElementById("textbox").value;
+            if (texto >= 0 && texto <= 9 && texto !="") {
+                alert("Valor Correto!");
+            } else {
+                alert("Valor Incorreta!");
+            }
+    }
+    </script>
+</body>
+</html>

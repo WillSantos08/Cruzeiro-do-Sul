@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="turno" type="text" placeholder="Insira seu turno">
+    <input id="horas" type="text" placeholder="Insira suas horas trabalhadas">
+    <input type="button" value="Confirmar" onclick="confirmar()">
+    <script>
+        function confirmar() {
+            turno = document.getElementById('turno').value;
+            horas = document.getElementById('horas').value;
+
+            if (turno == "N" && turno != "" && horas != 0) {
+                total = horas * 45.00;
+            } else if (turno == "M" && turno != "" && horas != 0) {
+                total = horas * 37.50;
+            } else {
+                alert("O turno/horas inseridas não são válidos!")
+            }
+
+            alert("Seu salário é de: " + total);
+        }
+    </script>
+</body>
+</html>
