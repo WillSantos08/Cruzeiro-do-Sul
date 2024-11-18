@@ -1,0 +1,12 @@
+.imagem {
+    -webkit-mask-image: linear-gradient(black, rgba(0, 0, 0, 0.6));
+    mask-image: linear-gradient(black,  rgba(0, 0, 0, 0.6));
+}
+
+.titulo {
+    padding: 1%;
+}
+
+.block {
+    height: 5%;
+}
