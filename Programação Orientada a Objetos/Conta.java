@@ -1,70 +1,79 @@
 import java.util.Scanner;
 
 public class Conta {
-    String Nome = "";
-    double Saldo = 0;
-    double Saque = 0;
+    @SuppressWarnings("unused")
+    private String nome;
+    private double saldo = 0;
 
-    public void Cadastrar() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite seu nome completo: ");
-        this.Nome = sc.nextLine();
-        System.out.println("Digite seu saldo: ");
-        this.Saldo = sc.nextDouble();
-        sc.close();
+    public void cadastrar(Scanner sc) {
+        System.out.print("Digite seu nome completo: ");
+        this.nome = sc.nextLine();
+        System.out.println("Conta cadastrada com sucesso!");
     }
 
-    public void Saque() {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite o valor do saque: ");
-        this.Saque = sc.nextDouble();
+    public void sacar(Scanner sc) {
+        System.out.print("Digite o valor do saque: ");
+        double saque = sc.nextDouble();
+        sc.nextLine();
 
-        if (this.Saque <= this.Saldo) {
-            this.Saldo -= this.Saque;
-            System.out.println("Saque realizado com sucesso. Seu saldo atual é: " + this.Saldo);
+        if (saque <= this.saldo) {
+            this.saldo -= saque;
+            System.out.printf("Saque realizado com sucesso! Saldo atual: R$ %.2f%n", this.saldo);
         } else {
             System.out.println("Saldo insuficiente.");
         }
-        sc.close();
     }
 
-    public void Saldo() {
-        System.out.println("Seu saldo atual é: " + this.Saldo);
-    }
+    public void depositar(Scanner sc) {
+        System.out.print("Digite o valor do depósito: ");
+        double valorDeposito = sc.nextDouble();
+        sc.nextLine();
 
-    public class InnerConta {
-
-        public void menu() {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Escolha a opção desejada:\n1 - Cadastrar\n2 - Saque\n3 - Saldo\n4 - Sair");
-            int opcao = sc.nextInt();
-
-            while (opcao != 4) {
-                switch (opcao) {
-                    case 1:
-                        Cadastrar();
-                        break;
-                    case 2:
-                        Saque();
-                        break;
-                    case 3:
-                        Saldo();
-                        break;
-                    default:
-                        System.out.println("Opção inválida");
-                }
-                System.out.println("Escolha a opção desejada:\n1 - Cadastrar\n2 - Saque\n3 - Saldo\n4 - Sair");
-                opcao = sc.nextInt();
-
-                sc.close();
-            }
-            System.out.println("Saindo... Obrigado!");
+        if (valorDeposito > 0) {
+            this.saldo += valorDeposito;
+            System.out.printf("Depósito realizado com sucesso! Saldo atual: R$ %.2f%n", this.saldo);
+        } else {
+            System.out.println("Valor inválido! O depósito deve ser maior que zero.");
         }
     }
 
+    public void verSaldo() {
+        System.out.printf("Seu saldo atual é: R$ %.2f%n", this.saldo);
+    }
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Conta conta = new Conta();
-        InnerConta innerConta = conta.new InnerConta();
-        innerConta.menu();
+        int opcao;
+
+        do {
+            System.out.println("\nEscolha a opção desejada:");
+            System.out.println("1 - Cadastrar\n2 - Sacar\n3 - Ver Saldo\n4 - Depositar\n5 - Sair");
+            System.out.print("Opção: ");
+            opcao = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcao) {
+                case 1:
+                    conta.cadastrar(sc);
+                    break;
+                case 2:
+                    conta.sacar(sc);
+                    break;
+                case 3:
+                    conta.verSaldo();
+                    break;
+                case 4:
+                    conta.depositar(sc);
+                    break;
+                case 5:
+                    System.out.println("Saindo... Obrigado!");
+                    break;
+                default:
+                    System.out.println("Opção inválida! Tente novamente.");
+            }
+        } while (opcao != 5);
+
+        sc.close();
     }
 }
