@@ -19,5 +19,7 @@ public class exec13 {
         }
 
         System.out.println("Números Positivos: " + ContagemPositiva + "\nNúmerosNegativos: " + ContagemNegativa);
+
+        obj.close();
     }
 }

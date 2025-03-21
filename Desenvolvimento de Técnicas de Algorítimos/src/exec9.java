@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class exec9 {
+    @SuppressWarnings("resource")
     public static void main (String args[]) {
         Scanner obj = new Scanner(System.in);
 
@@ -32,5 +33,7 @@ public class exec9 {
         }
 
         System.out.println("Código do Produto: " + codProduto + "\nQuantidade: " + qtdComprada + "\nTotal: R$" + resultado);
+
+        obj.close();
     }
 }

@@ -31,5 +31,7 @@ public class exec8 {
         } else {
             System.out.println("Você não existe!");
         }
+
+        obj.close();
     }
 }

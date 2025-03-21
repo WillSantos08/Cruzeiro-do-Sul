@@ -34,5 +34,7 @@ public class exec4 {
 
         liq = salbruto - inss - ir;
         System.out.println("O seu salário líquido é de: R$ " + liq);
+
+        obj.close();
     }
 }

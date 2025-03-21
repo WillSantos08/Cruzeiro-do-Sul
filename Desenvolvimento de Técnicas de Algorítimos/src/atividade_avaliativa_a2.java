@@ -37,5 +37,6 @@ public class atividade_avaliativa_a2 {
         totalProduto = valorProduto + (valorProduto * aumentoProduto);
 
         System.out.println("O seu produto após o aumento é de: R$ " + df.format(totalProduto));
+        obj.close();
     }
 }

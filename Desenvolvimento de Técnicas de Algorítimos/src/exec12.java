@@ -6,7 +6,7 @@ public class exec12 {
         Scanner obj = new Scanner(System.in);
         Random generator = new Random();
 
-        int numSorteado = generator.nextInt(0, 10), escolhaJogador = 0, count = 0;
+        int numSorteado = generator.nextInt(10), escolhaJogador = 0, count = 0;
 
         while (count <= 3) {
             System.out.println("Tente advinhar o número sorteado: ");
@@ -27,5 +27,7 @@ public class exec12 {
         if (escolhaJogador != numSorteado) {
             System.out.println("VOCÊ PERDEU O JOGO!");
         }
+
+        obj.close();
     }
 }

@@ -22,5 +22,7 @@ public class exec6 {
         }
 
         System.out.println("O resultado final é" + C);
+
+        obj.close();
     }
 }

@@ -53,5 +53,6 @@ public class atividade_avaliativa_a2_2 {
         totalProduto = valorMorango + valorMaca + valorPera;
 
         System.out.println("Morangos (Kg): " + pesoMorango + "\nR$ " + df.format(valorMorango) + "\nMaçãs (Kg): " + pesoMaca + "\nR$ " + df.format(valorMaca) + "\nPêras (Kg): " + pesoPera + "\nR$ " + df.format(valorPera) + "\n\nValor Total: R$ " + df.format(totalProduto));
+        obj.close();
     }
 }

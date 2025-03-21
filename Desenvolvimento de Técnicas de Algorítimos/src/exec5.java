@@ -17,5 +17,7 @@ public class exec5 {
         NS = SB + ((SB * PA)/100);
 
         System.out.println("O seu novo valor de Salário Bruto é de " + (NS));
+
+        obj.close();
     }
 }

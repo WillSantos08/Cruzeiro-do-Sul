@@ -33,5 +33,7 @@ public class exec11 {
         }
 
         System.out.println("Média das Idades - " + somaIdade/contaIdade + "\nQuantidade Ótimo - " + qtdOtimo + "\nQuantidade Bom - " + qtdBom + "\nQuantidade Regular - " + qtdRegular);
+
+        obj.close();
     }
 }

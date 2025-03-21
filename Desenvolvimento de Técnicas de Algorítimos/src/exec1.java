@@ -15,5 +15,6 @@ public class exec1 {
         media = ((n1 + n2 + n3 + n4)/ 4);
 
         System.out.println("A média dos números informados é de: " + (media));
+        obj.close();
     }
 }

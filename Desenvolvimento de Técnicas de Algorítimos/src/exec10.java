@@ -40,5 +40,7 @@ public class exec10 {
         total = total - desconto;
 
         System.out.println("Sua compra saiu no total de: R$ " + total);
+
+        obj.close();
     }
 }

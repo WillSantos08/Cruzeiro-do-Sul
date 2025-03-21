@@ -7,5 +7,6 @@ public class exec2 {
         vlrGasto = obj.nextDouble();
 
 System.out.println("valor com 10% = " + (vlrGasto + (vlrGasto * 10)/100));
+obj.close();
     }
 }

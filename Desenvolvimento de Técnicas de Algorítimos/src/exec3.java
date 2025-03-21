@@ -11,5 +11,6 @@ public class exec3 {
         resto = n1 % n2;
 
         System.out.println("Soma: " + (n1 + n2) + "\nSubtração: " + (n1 - n2) + "\nMultiplicação: " + (n1 * n2) + "\nDivisão: " + (n1 / n2) + "\nResto: " + (resto));
+        obj.close();
     }
 }
