@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Aula 31.03.2025 - Exec1",
+            "database": "Banco de Dados/exec1.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
