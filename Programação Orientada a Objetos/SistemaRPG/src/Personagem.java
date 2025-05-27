@@ -15,4 +15,5 @@ public class Personagem {
     void Atacar() {
         System.out.format("O personagem %s ataca seu inimigo, causando %d de dano!\n", nome, calculoDano());
     }
+
 }

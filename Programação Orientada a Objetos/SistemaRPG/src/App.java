@@ -12,7 +12,8 @@ public class App {
         Personagem inimigo = new Personagem();
         inimigo.nome = "Goblin";
         inimigo.vida = 7;
-        inimigo.forca = 2;
+        inimigo.forca = 3;
         inimigo.Atacar();
+
     }
 }
